@@ -6,8 +6,11 @@ This repository provides Makefile to build program
 -------------
 ### How to run ###
 
-1. Simply command : 
-<code> $make </code>
+1. Simply command as below to make executable file of this program : <br>
+<code> $ make </code>
 
-2. If you want to use different input file, you only need to modify input file name in scc.c file.
+2. Then command as below to run program : <br>
+<code> $ ./SCC </code>
+
+*If you want to use different input file, you only need to modify input file name in scc.c file.*
 
