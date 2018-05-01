@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define numOfVertex 8
+#define numOfVertex 7
 
 struct node{
 	int index; 
