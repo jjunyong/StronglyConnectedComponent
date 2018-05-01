@@ -14,3 +14,6 @@ This repository provides Makefile to build program
 
 *If you want to use different input file, you only need to modify input file name in scc.c file.*
 
+### Screen shots ###
+![ex_screenshot](./img/screenshot1.PNG)
+![ex_screenshot](./img/screenshot2.PNG)
