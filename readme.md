@@ -14,3 +14,12 @@ This repository provides Makefile to build program
 
 *If you want to use different input file, you only need to modify input file name in scc.c file.*
 
+### Screen shots ###
+1. First screesnshot shows Adjacency Matrix and Adjacency List of input graph(let's call it G)
+![ex_screenshot](./img/screenshot1.PNG)
+
+2. Second screenshot shows discovery time and finish time of each node for both G and transpose of G
+![ex_screenshot](./img/screenshot2.PNG)
+
+3. Last screenshot shows Strongly Connected Component founded.
+![ex_screenshot](./img/screenshot3.PNG)
