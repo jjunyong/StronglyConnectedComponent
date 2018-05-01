@@ -1,4 +1,4 @@
-## Program For finding Strongly Connected Component hw4 ##
+## Program For finding Strongly Connected Component ##
 
 This repository is for 2018-1 Algorithm Analysis hw4
 This repository provides Makefile to build program
