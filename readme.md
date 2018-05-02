@@ -12,7 +12,7 @@ This repository provides Makefile to build program
 2. Then command as below to run program : <br>
 <code> $ ./SCC </code>
 
-3. Cleaning binary files of current directory can be done by :
+3. Cleaning binary files of current directory can be done by : <br>
 <code> $ ./make clean </code>
 
 * *If you want to use different input file, you only need to modify input file name in scc.c file.*
