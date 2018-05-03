@@ -53,7 +53,6 @@ void addTransEdge(int v1, int v2) {
 	}
 
 	struct node * temp = (struct node *)malloc(sizeof(struct node));
-
 	struct node * cur = linkedArray_trans[v1];
 
 	temp->index = v2;
