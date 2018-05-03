@@ -25,26 +25,23 @@ void addEdge(int v1, int v2) {
 	if(v1>=17 && v2>=17){
 		v1 = v1-17;
 		v2 = v2-17;
-
-//		printf("v1 : %d, v2: %d\n",v1,v2);
 	}
 
-	struct node * newNode = (struct node *)malloc(sizeof(struct node));
-
+	struct node * temp = (struct node *)malloc(sizeof(struct node));
 	struct node * cur = linkedArray[v1];
 
-	newNode->index = v2;
-	newNode->link = NULL;
+	temp->index = v2;
+	temp->link = NULL;
 
 	if (cur == NULL) {
-		linkedArray[v1] = newNode;
+		linkedArray[v1] = temp;
 		return;
 	}
 	else {
 		while (cur->link != NULL) {
 			cur = cur->link;
 		}
-		cur->link = newNode;
+		cur->link = temp;
 		return;
 	}
 }
@@ -55,22 +52,22 @@ void addTransEdge(int v1, int v2) {
 		v2 = v2-17;
 	}
 
-	struct node * newNode = (struct node *)malloc(sizeof(struct node));
+	struct node * temp = (struct node *)malloc(sizeof(struct node));
 
 	struct node * cur = linkedArray_trans[v1];
 
-	newNode->index = v2;
-	newNode->link = NULL;
+	temp->index = v2;
+	temp->link = NULL;
 
 	if (cur == NULL) {
-		linkedArray_trans[v1] = newNode;
+		linkedArray_trans[v1] = temp;
 		return;
 	}
 	else {
 		while (cur->link != NULL) {
 			cur = cur->link;
 		}
-		cur->link = newNode;
+		cur->link = temp;
 		return;
 	}
 }
@@ -93,7 +90,6 @@ void DFS_Visit(int u){
 	fG[u] = time++;
 }
 
-
 void DFS_Visit_trans(int u, int SCC){
 
 	color[u] = 'G';
@@ -113,7 +109,6 @@ void DFS_Visit_trans(int u, int SCC){
 	color[u] = 'B';
 	f[u] = time++;
 }
-
 void DFS(){
 
 	time = 1;
@@ -128,7 +123,6 @@ void DFS(){
 		}
 	}
 }
-
 void DFS_decrease_order(int SCC){
 
 	time = 1;
@@ -136,8 +130,6 @@ void DFS_decrease_order(int SCC){
 	for(int i=0;i<numOfVertex;i++){
 		color[i] = 'W';
 	}
-	
-
 	if(SCC==1){
 		
 		for(int i=0;i<numOfVertex;i++){
@@ -157,7 +149,6 @@ void DFS_decrease_order(int SCC){
 		}
 	}
 }
-
 void show(){
 
 	for(int i=0;i<numOfVertex;i++){
@@ -169,19 +160,14 @@ void show(){
 		}
 		printf("\n");
 	}
-	
 }
-
 int main() {
 
-	
 	FILE *fp ; //파일 포인터
-
         fp = fopen("hw4.data","r");
 
         char storage[numOfVertex+1][numOfVertex+1];
         char ch;
-
 
         int i=0;
         while(i<numOfVertex+1){
@@ -201,8 +187,6 @@ int main() {
                 }
                 i++;
         }
-
-
         int j;
         for(i=0;i<numOfVertex+1;i++){
                 for(j=0;j<numOfVertex+1;j++){
@@ -211,7 +195,6 @@ int main() {
                 printf("\n");
 	}
 	printf("-----------------------------------------------------\n");
-
 
 	for(int i=1;i<numOfVertex+1;i++){
 		for(int j=1;j<numOfVertex+1;j++){
@@ -222,8 +205,6 @@ int main() {
 			}
 		}
 	}
-
-
 	show();
 	DFS();
 	printf("-----------------------------------------------------\n");
@@ -246,7 +227,6 @@ int main() {
 		order[i] = index;
 		fG[index] = -1;
 	}
-
 	DFS_decrease_order(0);
 	printf("-----------------------------------------------------\n");
 	printf("discovery time & finish time of transposed input Graph\n");
